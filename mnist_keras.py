@@ -22,6 +22,7 @@ network = models.Sequential()
 network.add(layers.Dense(512, activation='relu', input_shape=(28 * 28,)))
 network.add(layers.Dense(10, activation='softmax'))
 
+# create the network
 network.compile(optimizer='rmsprop',
                 loss='categorical_crossentropy',
                 metrics=['accuracy'])
