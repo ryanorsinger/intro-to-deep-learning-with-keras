@@ -42,8 +42,7 @@ This figure shows the original data and a new representation. We obtain new repr
 
 ## What is Deep Learning good for?
 - Categorization tasks
-- absolutely nothing!
-
+- Regressions
 
 ### Vocabulary
 - Tensor: a basic data structure in machine learning, a container for data can hold n dimensional matrices, usually numerical data
@@ -56,7 +55,13 @@ This figure shows the original data and a new representation. We obtain new repr
 	- Data type (usually dtype)
 
 ### Real World Tensor Data
-- Vector data —2D tensors of shape (samples, features)- Timeseries data or sequence data are 3D tensors of shape (samples, timesteps,features)- Images—4D tensors of shape(samples,height,width,channels)or(samples,channels, height, width)- Video —5D tensors of shape (samples, frames, height, width, channels) or(samples, frames, channels, height, width)
+- Vector data —2D tensors of shape (samples, features)
+- Timeseries data or sequence data are 3D tensors of shape (samples, timesteps,
+features)
+- Images—4D tensors of shape(samples,height,width,channels)or(samples,
+channels, height, width)
+- Video —5D tensors of shape (samples, frames, height, width, channels) or
+(samples, frames, channels, height, width)
 
 
 ## Show me the code!
