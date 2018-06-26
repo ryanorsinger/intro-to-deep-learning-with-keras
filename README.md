@@ -36,18 +36,17 @@ This figure shows the original data and a new representation. We obtain new repr
 - Each layer is the application of geometric transformations of the tensor data
 
 ### What Deep Learning is *not*
-- How brains function in living things
-- Inaccessible mathematics or beyond your understanding
+- Inaccessible mathematics
+- Beyond your understanding
 - Free from bias and prejudice. (Biased inputs mean biased outputs)
 
 ## What is Deep Learning good for?
-- Categorization tasks
+- Categorization tasks (binary classification, multiclass classification)
 - Regressions
 - Clustering 
-- Dimensionality reduction
 
 ### Vocabulary
-- Tensor: a basic data structure in machine learning, a container for data can hold n dimensional matrices, usually numerical data
+- Tensor: a basic data structure in machine learning, a container for data can hold n dimensional matrices, usually numerical data (np
 - Scalar: A tensor that holds only one number  (a zero dimensional tensor)
 - Vector: A one dimensional array of numbers (a one dimensional tensor)
 - Matrices: An array of vectors. (a two dimensional tensor)
@@ -57,9 +56,9 @@ This figure shows the original data and a new representation. We obtain new repr
     - Data type (usually dtype)
 
 ### Real World Tensor Data
-- Vector data —2D tensors of shape (samples, features)
+- Vector data —2D tensors of shape (samples, **features**)
 - Timeseries data or sequence data are 3D tensors of shape (samples, timesteps,
-features)
+**features**)
 - Images—4D tensors of shape(samples,height,width,channels)or(samples,
 channels, height, width)
 - Video —5D tensors of shape (samples, frames, height, width, channels) or
@@ -94,12 +93,12 @@ Import the keras models and create the network
     from keras import models
     from keras import layers
 
-    network = models.Sequential()
-    network.add(layers.Dense(512, activation='relu', input_shape=(28 * 28,)))
-    network.add(layers.Dense(10, activation='softmax'))
+    model = models.Sequential()
+    model.add(layers.Dense(512, activation='relu', input_shape=(28 * 28,)))
+    model.add(layers.Dense(10, activation='softmax'))
 
 
-    network.compile(optimizer='rmsprop',
+    model.compile(optimizer='rmsprop',
                 loss='categorical_crossentropy',
                 metrics=['accuracy'])
 
@@ -116,7 +115,27 @@ Take a moment to reexplore the shape and dimension of the test_images
 
 Check loss score, send data through optimizer
 
-    network.fit(train_images, train_labels, epochs=5, batch_size=128)
-    test_loss, test_acc = network.evaluate(test_images, test_labels)
+    model.fit(train_images, train_labels, epochs=5, batch_size=128)
+    test_loss, test_acc = model.evaluate(test_images, test_labels)
     print('test_acc:', test_acc)
     print('test_loss:', test_loss)
+
+## Resources
+
+### Video Recommendations
+- 
+- MIT's Linear Algebra `http://web.mit.edu/18.06/www/videos.shtml`
+- If you're a Bexar County resident, get your library card from `https://bexarbibliotech.org/` to get free access to `lynda.com`, a massive library of high quality video courses for professionals.
+- Recommend `https://www.lynda.com/Google-TensorFlow-tutorials/Building-Deep-Learning-Applications-Keras-2-0/601801-2.html`
+
+
+### Selected readings
+
+*Deep Learning With Python* by Francois Chollet `https://livebook.manning.com/#!/book/deep-learning-with-python/about-this-book/`
+
+### Courses
+- 
+
+### People to follow
+- DynamicWebPaige
+- 
