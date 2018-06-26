@@ -43,6 +43,8 @@ This figure shows the original data and a new representation. We obtain new repr
 ## What is Deep Learning good for?
 - Categorization tasks
 - Regressions
+- Clustering 
+- Dimensionality reduction
 
 ### Vocabulary
 - Tensor: a basic data structure in machine learning, a container for data can hold n dimensional matrices, usually numerical data
@@ -50,9 +52,9 @@ This figure shows the original data and a new representation. We obtain new repr
 - Vector: A one dimensional array of numbers (a one dimensional tensor)
 - Matrices: An array of vectors. (a two dimensional tensor)
 - Tensors are defined by 3 key attributes:
-	- Number of axes, rank, or .ndim property. A 3D tensor has 3 axes and a matrix has 2 axes. 
-	- Shape
-	- Data type (usually dtype)
+    - Number of axes, rank, or .ndim property. A 3D tensor has 3 axes and a matrix has 2 axes. 
+    - Shape
+    - Data type (usually dtype)
 
 ### Real World Tensor Data
 - Vector data —2D tensors of shape (samples, features)
@@ -66,55 +68,55 @@ channels, height, width)
 
 ## Show me the code!
 1. Install pre-requisites
-	- Python 2 or 3, the pip package manager (`brew install pip` for Macs)
-	- `pip install tensorflow`
-	- `pip install keras`
+    - Python 2 or 3, the pip package manager (`brew install pip` for Macs)
+    - `pip install tensorflow`
+    - `pip install keras`
 
 Pull in our training data and test data
-	
-	from keras.datasets import mnist
-	(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+    
+    from keras.datasets import mnist
+    (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
 
 Explore the data a bit to understand its shape
 
-	len(train_labels)
-	train_images.shape
-	train_images[0].shape
+    len(train_labels)
+    train_images.shape
+    train_images[0].shape
 
-	train_labels
+    train_labels
 
-	test_images.shape
-	len(test_labels)
-	test_labels
+    test_images.shape
+    len(test_labels)
+    test_labels
 
 Import the keras models and create the network
-	
-	from keras import models
-	from keras import layers
-	
-	network = models.Sequential()
-	network.add(layers.Dense(512, activation='relu', input_shape=(28 * 28,)))
-	network.add(layers.Dense(10, activation='softmax'))
+    
+    from keras import models
+    from keras import layers
+
+    network = models.Sequential()
+    network.add(layers.Dense(512, activation='relu', input_shape=(28 * 28,)))
+    network.add(layers.Dense(10, activation='softmax'))
 
 
-	network.compile(optimizer='rmsprop',
+    network.compile(optimizer='rmsprop',
                 loss='categorical_crossentropy',
                 metrics=['accuracy'])
 
-	train_images = train_images.reshape((60000, 28 * 28))
-	train_images = train_images.astype('float32') / 255
-	test_images = test_images.reshape((10000, 28 * 28))
-	test_images = test_images.astype('float32') / 255
+    train_images = train_images.reshape((60000, 28 * 28))
+    train_images = train_images.astype('float32') / 255
+    test_images = test_images.reshape((10000, 28 * 28))
+    test_images = test_images.astype('float32') / 255
 
 Take a moment to reexplore the shape and dimension of the test_images
 
-	from keras.utils import to_categorical
-	train_labels = to_categorical(train_labels)
-	test_labels = to_categorical(test_labels)
+    from keras.utils import to_categorical
+    train_labels = to_categorical(train_labels)
+    test_labels = to_categorical(test_labels)
 
 Check loss score, send data through optimizer
 
-	network.fit(train_images, train_labels, epochs=5, batch_size=128)
-	test_loss, test_acc = network.evaluate(test_images, test_labels)
-	print('test_acc:', test_acc)
-	print('test_loss:', test_loss
+    network.fit(train_images, train_labels, epochs=5, batch_size=128)
+    test_loss, test_acc = network.evaluate(test_images, test_labels)
+    print('test_acc:', test_acc)
+    print('test_loss:', test_loss)
