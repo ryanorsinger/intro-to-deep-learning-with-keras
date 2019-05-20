@@ -52,7 +52,7 @@ The key component of deep learning sending representation results through an opt
 ### Vocabulary
 
 - **Tensor**: a basic data structure holding n dimensional matrices, usually numerical data
-  - **Scalar**: A tensor that holds only one number  (a zero dimensional tensor)
+- **Scalar**: A tensor that holds only one number (a zero dimensional tensor)
 - **Vector**: A one dimensional array of numbers (a one dimensional tensor)
 - **Matrices**: An array of vectors. (a two dimensional tensor)
 
