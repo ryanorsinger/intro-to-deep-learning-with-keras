@@ -1,12 +1,12 @@
-# ⏳ Intro to Deep Learning with Keras
+# Intro to Deep Learning with Keras
 
 ## Summary
 
-Today you will get an intro to deep learning and run a neural network with Keras 📊 
+Today you will get an intro to deep learning and run a neural network with Keras.
 
-You will see that getting started is *accessible* and you don't have to know everything to get started
+You will see that getting started is *accessible* and you don't have to know everything to get started.
 
-We will import a data set, explore the shape of the data, and create a deep learning model
+We will import a data set, explore the shape of the data, and create a deep learning model.
 
 
 ## Context
@@ -87,10 +87,6 @@ Geometric transformations in high dimensional space. "Uncrumpling paper balls is
 
 ![dimensionality reduction](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig09.jpg)
 
-
-
-
-
 ## Anatomy of a Deep Learning Network
 
 <img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/01fig09.jpg" height="300px">
@@ -100,9 +96,24 @@ Geometric transformations in high dimensional space. "Uncrumpling paper balls is
 - This is the "learning" process: the feeding back of the result of predictions (backpropogation) through an optimization function that updates weights on layers that run on the data again, making for more effective predictions.
 - Each layer is the application of many geometric transformations of the tensor data
 
+![representations](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/01fig06_alt.jpg)
 
 
 
+### Gradient-based optimization, the engine of neural networks
 
-- 
+With our `optimizer`, training happens within what’s called a *training loop*, which works as follows. Repeat these steps in a loop, as long as necessary:
 
+1. Draw a batch of training samples `x` and corresponding targets `y`.
+2. Run the network on `x` to obtain predictions `y_pred`.
+3. Compute the loss of the network on the batch, a measure of the mismatch between `y_pred` and `y`.
+4. Compute the gradient of the loss with regard to the network’s parameters (a *backward pass*).
+5. Move the parameters a little in the opposite direction from the gradient—for example `W = step * gradient`—thus reducing the loss on the batch a bit.
+
+### Stochastic Gradient Descent 
+
+![single paremeter gradient descent](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig11.jpg)
+
+
+
+![gradient descent](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig12.jpg)
