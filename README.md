@@ -1,4 +1,4 @@
-# Intro to Deep Learning with Keras
+# Intro to Deep Learning
 
 ## Summary
 
@@ -28,11 +28,14 @@ The "deep" refers to the number of layers of data transformation used to sift fo
 
 Deep learning is the application of many different representations of data to identify meaningful relationships in data. Explore high dimensional representations of the data.
 
-The key component of deep learning is comparing predictions vs. true targets, then sending that data through an optimizer that updates weights and runs the inputs with the updated weights. 
+The key component of deep learning sending representation results through an optimizer that updates weights and runs the inputs with the updated weights. 
+
+
+
 
 ### What Deep Learning is *not*
 
-- Cognition or thinking or inaccessible mathematics
+- Cognition or thinking or inaccessible mathematics. Nor is it generalized.
 - Always better or always worse than classical machine learning. "It depends"
 - Free from bias and prejudice. (Biased inputs mean biased outputs) 
 
@@ -40,28 +43,30 @@ The key component of deep learning is comparing predictions vs. true targets, th
 
 - As an example, researchers trained a Convolutional Neural Network (CNN) pictures of healthy skin and pictures of skin cancers lesions. Each image was labeled "non-cancerous" or "cancerous". The model was **very** accurate on the training data. With test data and real pictures, the model produced a *profound* amount of false negatives. It turns out that > 90% of the the "cancerous" labeled images for training had a ruler in the image, for scale. So the model "learned" to associate rulers in the picture with a positive cancer prediction.
 - In another example, researchers building criminality prediction algorithm trained a neural network with labeled pictures. The criminal pictures were mug shots from convicts. For the "non-criminal" images, researchers used a set of royalty-free images of fashion models. Imagine the results! The more someone looks like a model, the less likely the criminality! 
-  - Imagine the racism (b/c under-represented people are *really* underrepresented in fashion and *very* overrepresented in the prison-industrial complex. Automated racism!
-  - Imagine the classism! If you can afford to wear high fashion garments, invest in expensive make-up, and have a salon hairdo, then you, too, can walk free!
-- Incentivised, ignorant, and malicious actors will claim "the data doesn't lie". They wash their hands claiming "science" and "computer algorithms". No incentive to question assumptions.
+  - Racism! Because under-represented groups are *really* underrepresented in fashion and *very* overrepresented in the prison-industrial complex. 
+  - Classism! If you can afford to wear high fashion garments, invest in expensive make-up, and have a salon hairdo, then you, too, can walk free! 
+- Incentivized, ignorant, and malicious actors will claim "the data doesn't lie". They wash their hands claiming "science" and "computer algorithms". No incentive to question assumptions.
 - Takeaway: *many* problems need the model to be interpretable. 
 - It's our ethical duty to shine the light, to work to make things better not worse.
 
 ### Vocabulary
 
 - **Tensor**: a basic data structure holding n dimensional matrices, usually numerical data
-- **Scalar**: A tensor that holds only one number  (a zero dimensional tensor)
-- **Vector**: A one dimensional array of numbers (a one dimensional tensor)**
+  - **Scalar**: A tensor that holds only one number  (a zero dimensional tensor)
+- **Vector**: A one dimensional array of numbers (a one dimensional tensor)
 - **Matrices**: An array of vectors. (a two dimensional tensor)
 
 ### Real World Tensor Data
 
 - Vector data —2D tensors (samples, **features**)
-- Timeseries data or sequence data are 3D tensors of shape (samples, timesteps,
+- Time series data or sequence data are 3D tensors of shape (samples, time-steps,
   **features**)
 - Images—4D tensors of shape(samples,height,width,channels)or(samples,
   channels, height, width)
 - Video —5D tensors of shape (samples, frames, height, width, channels) or
   (samples, frames, channels, height, width)
+
+
 
 ### Image data tensors - 4 dimensional tensors
 
@@ -117,3 +122,39 @@ With our `optimizer`, training happens within what’s called a *training loop*,
 
 
 ![gradient descent](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig12.jpg)
+
+
+
+
+
+### Why and when to use neural networks vs. classical ML
+
+- When we have tremendous amounts of data
+- When we have rich, perceptual data such as images, audio, or video
+- When we want automated feature engineering, but remember the curse of dimensionality!
+- When we have the resources and time
+
+### Why and when to use classical ML over neural networks
+
+- Works better on small data
+
+- Financially and computationally cheap
+
+- Easier to interpret
+
+
+### Further resources
+
+#### Video Course Recommendations
+
+- Recommend `https://www.lynda.com/Google-TensorFlow-tutorials/Building-Deep-Learning-Applications-Keras-2-0/601801-2.html` 
+- `https://www.fast.ai/`for deeper practice with deep learning. 
+- MIT's Linear Algebra `http://web.mit.edu/18.06/www/videos.shtml`
+- If you're a Bexar County resident, get your library card from `https://bexarbibliotech.org/` to get free access to `lynda.com`, a massive library of high quality video courses for professionals.
+-  `https://www.lynda.com/Google-TensorFlow-tutorials/Building-Deep-Learning-Applications-Keras-2-0/601801-2.html` is pretty solid. 
+
+#### Selected readings
+
+- *Deep Learning With Python* by Francois Chollet (first 3 chapters are free) `https://livebook.manning.com/#!/book/deep-learning-with-python/about-this-book/`
+
+- `https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf`  to answer the question, "what model should I use?"
