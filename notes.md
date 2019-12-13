@@ -2,17 +2,10 @@
 Neuron
 Perceptron - a single neuron with n amount of binary inputs that computes a weighted sum of its in puts and "fires" if that weighted sum is 0 or greater.
 
-
-
-
-
-
-
-
 Questions:
 What is a neuron?
 How do DL neurons differ?
-What isa perceptron?
+What is a perceptron?
 
 What is an Artificial Neural Network?
 What is a multilayer perceptron?
@@ -76,6 +69,7 @@ Like real neurons, artificial neurons start getting more interesting when you st
 
 If we're building an encoder for string input that represents a red, yellow, green light on a stoplight. The encoding would be the following. That's because the input to the NN needs to be represented as a vector.
 
+```python
 def stoplight_encode(x):
     if x == "green":
         return [1, 0, 0]
@@ -83,3 +77,38 @@ def stoplight_encode(x):
         return [0, 1, 0]
     else:
         return [0, 0, 1]
+```
+
+### One hot encoding creates a state space in a binary vector
+For each piece of output state, represent the outcome as a vector of booleans.
+
+For example, we don't need an encoding if we're builiding for a function like is_positive or is_negative. There are only two states of outcomes and they're binary/boolean, so we're good to go.
+
+For instance, one-hot-encoding the fizzbuzz output rules become:
+
+```python
+def fizz_buzz_encode(x):
+    if x % 15 == 0:
+        return [0, 0, 0, 1]
+    elif x % 5 == 0:
+        return [0, 0, 1, 0]
+    elif x % 3 == 0:
+        return [0, 1, 0, 0]
+    else:
+        return [1, 0, 0, 0]
+
+assert fizz_buzz_encode(2) == [1, 0, 0, 0]
+assert fizz_buzz_encode(6) == [0, 1, 0, 0]
+assert fizz_buzz_encode(10) == [0, 0, 1, 0]
+assert fizz_buzz_encode(30) == [0, 0, 0, 1]
+```
+
+
+## Key Terms and Vocabulary
+Feed Forward Neural Networks
+Backpropogation
+
+
+## Concepts
+- Why use a sigmoid function as your activation function instead of a step function?
+
