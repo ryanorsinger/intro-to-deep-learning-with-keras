@@ -12,12 +12,11 @@ What is a multilayer perceptron?
 
 How do we build, train, evaluate, and run neural networks?
 
-ANNs go back to 1943 w/ the McCullouch and Pitts paper "Logical Calculus of Ideas Immanent in Nervous Activity". They provided a computational model of how 
+ANNs go back to 1943 w/ the McCullouch and Pitts paper "Logical Calculus of Ideas Immanent in Nervous Activity". They provided a computational model of how biological neuron
 
 Why ANNs?
 - With enough data, ANNs can outperform other ML techniques
 - Virtuous cycle of funding and progress
-
 
 
 Neural Network:

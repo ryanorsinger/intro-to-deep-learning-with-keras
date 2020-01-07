@@ -31,8 +31,6 @@ Deep learning is the application of many different representations of data to id
 The key component of deep learning sending representation results through an optimizer that updates weights and runs the inputs with the updated weights. 
 
 
-
-
 ### What Deep Learning is *not*
 
 - Cognition or thinking or inaccessible mathematics. Nor is it generalized.
@@ -151,7 +149,6 @@ With our `optimizer`, training happens within what’s called a *training loop*,
 - `https://www.fast.ai/`for deeper practice with deep learning. 
 - MIT's Linear Algebra `http://web.mit.edu/18.06/www/videos.shtml`
 - If you're a Bexar County resident, get your library card from `https://bexarbibliotech.org/` to get free access to `lynda.com`, a massive library of high quality video courses for professionals.
--  `https://www.lynda.com/Google-TensorFlow-tutorials/Building-Deep-Learning-Applications-Keras-2-0/601801-2.html` is pretty solid. 
 
 #### Selected readings
 
