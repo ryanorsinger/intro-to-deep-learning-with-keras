@@ -61,7 +61,9 @@ model = Sequential()
 
 model.add(Dense(64, input_shape=(num_digits,)))
 model.add(Activation('relu'))
+
 #model.add(Dropout(0.5))
+
 model.add(Dense(128))
 model.add(Activation('relu'))
 model.add(Dropout(0.2))
