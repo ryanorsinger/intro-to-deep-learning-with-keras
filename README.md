@@ -24,7 +24,7 @@ Deep learning answers the same questions as ML (classification, clustering, regr
 
 Applied linear algebra and calculus w/ the latest in hardware. Yay, math!
 
-The "deep" refers to the number of layers of data transformation used to sift for meaningful representations. Imagine a chain of logisic regressions feeding into eachother.
+The "deep" refers to the number of layers of data transformation used to sift for meaningful representations. Imagine a chain of logisic regressions feeding into eachother. 
 
 Deep learning is the application of many different representations of data to identify meaningful relationships in data. Explore high dimensional representations of the data.
 
@@ -103,7 +103,7 @@ Geometric transformations in high dimensional space. "Uncrumpling paper balls is
 
 
 
-### Gradient-based optimization, the engine of neural networks
+### Backpropogation is how the network "learns"
 
 With our `optimizer`, training happens within what’s called a *training loop*, which works as follows. Repeat these steps in a loop, as long as necessary:
 
