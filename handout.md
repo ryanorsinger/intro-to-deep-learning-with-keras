@@ -151,8 +151,8 @@ What's a representation? A different way to look at data. For example, the RGB r
 
 ## Key Concepts and Vocabulary
 Tensor
-Perceptron
-Multi-Layer Perceptron
+Perceptron (binary classifier)
+Multi-Layer Perceptron (MLP)
 Feed forward
 Backpropogation
 Activation Function
@@ -160,7 +160,7 @@ Loss
 Optimizer
 
 ## Keras Workflow
-0. Prep and load your data. You'll nemeaning it's already a tensor or you've converted your data to be a tensor)
+0. Prep and load your data. You'll nemeaning it's already a tensor or you've converted your data to be a tensor)	
 1. Create the model
 2. Add layer(s) with .add
 3. Compile the model with .compile (to configure the learning parameters)
