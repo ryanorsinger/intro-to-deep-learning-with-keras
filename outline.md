@@ -2,33 +2,33 @@
 
 *Just enough Keras for students to put on their resume or use to supplement their capstone projects.*
 
-## Act I - Intro to ANNs
+## Act I - Intro to ANNs 
 
 How ANNs function: Keras workflow, layers, representations
 
-Caution and ethics
+1. Anatomy and interaction of components
+2. Interpretability, caution, and ethics
+3. Just enough detail on how things work, not all the math or a deep dive on the history or cutting edge 
 
-Anatomy and interaction of components
+## Act II Neural Nets as a function approximation
 
-- I do: Keras 
-- We do: 
-- You do:
+- I do: Build and train a positive/negative number classifier.
+- We do: Build an even/odd number classifier. Identify the components, explain how each piece works.
+- You do: Build out FizzBuzz in Keras
 
-## Act II - Working with Images
+## Act III - Working with Image Data
 
-MNIST Digits, Fashion 
+MNIST Digits, CIFAR10, and Fashion
 
-- I do:  `is_five` predictor
-- We do: explore the mnist digits
-- You do:
+- I do:  MNIST handwritten digit classifier
+  - Connect to the big picture
+  - Explore and visualize
+- We do: CIFAR10 small images classifier
+- You do: Fashion image classifier
 
-<https://keras.io/examples/generative/deep_dream/>
+## More Practice
 
-## Act III - 
+- Classify movie review sentiment
 
-- I do
-
-- We do
-
-- You do:
-
+- House price predictor using regression
+- Classify newswire topics (multiclass)
