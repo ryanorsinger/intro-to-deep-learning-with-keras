@@ -6,7 +6,7 @@
 
 How ANNs function: Keras workflow, layers, representations
 
-1. Anatomy and interaction of components
+1. Concepts, Vocabulary, and Anatomy
 2. Interpretability, caution, and ethics
 3. Just enough detail on how things work, not all the math or a deep dive on the history or cutting edge 
 
@@ -28,7 +28,8 @@ MNIST Digits, CIFAR10, and Fashion
 
 ## More Practice
 
-- Classify movie review sentiment
-
-- House price predictor using regression
-- Classify newswire topics (multiclass)
+- Preprocessing resources. How to turn images/text/numbers into tensors/numpy arrays
+- Further datasets for practice:
+  - Classify movie review sentiment
+  - House price predictor using regression
+  - Classify newswire topics (multiclass)

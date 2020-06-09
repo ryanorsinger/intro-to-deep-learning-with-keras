@@ -157,7 +157,8 @@ Feed forward
 Backpropogation
 Activation Function
 Loss
-Optimizer
+Loss function
+Optimizer	
 
 ## Keras Workflow
 0. Prep and load your data. You'll nemeaning it's already a tensor or you've converted your data to be a tensor)	
