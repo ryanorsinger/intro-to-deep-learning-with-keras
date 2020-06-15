@@ -12,22 +12,22 @@ How ANNs function: Keras workflow, layers, representations
 
 ## Act II Neural Nets as a function approximation
 
-- I do: Build and train a positive/negative number classifier.
-- We do: Build an even/odd number classifier. Identify the components, explain how each piece works.
-- You do: Build out FizzBuzz in Keras
+- I do: Build an even/odd number classifier. Identify the components, explain how each piece works.
+- We do: Build out FizzBuzz in Keras
 
 ## Act III - Working with Image Data
 
-MNIST Digits, CIFAR10, and Fashion
+MNIST Digits and Fashion datasets with a CNN
 
 - I do:  MNIST handwritten digit classifier
   - Connect to the big picture
   - Explore and visualize
-- We do: CIFAR10 small images classifier
 - You do: Fashion image classifier
 
 ## More Practice
 
+- <https://keras.io/examples/vision/image_classification_from_scratch/>
+- CIFAR10 small images classifier
 - Preprocessing resources. How to turn images/text/numbers into tensors/numpy arrays
 - Further datasets for practice:
   - Classify movie review sentiment
