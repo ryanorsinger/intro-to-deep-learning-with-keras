@@ -142,6 +142,7 @@ With our `optimizer`, training happens within what’s called a *training loop*,
 
 
 ### Further resources
+- [MNIST Convolutional Deep Dive on Google Colab](https://codelabs.developers.google.com/codelabs/cloud-tensorflow-mnist/#0) by Martin Gorner
 
 #### Video Course Recommendations
 
