@@ -2,21 +2,23 @@
 
 ## Summary
 
-Today you will get an intro to deep learning and run a neural network with Keras.
+Today you will get an intro to deep learning. You will see that getting started is *accessible* and you don't have to know everything to get started. You can get airborn pretty quickly!
 
-You will see that getting started is *accessible* and you don't have to know everything to get started.
-
-We will import a data set, explore the shape of the data, and create a deep learning model.
+We will explore the data encoding, train, run, and evaluate neural networks in Python using Keras.
 
 
-## Context
+
+<img src="./machine_learning_vs_classical_programming.jpeg" height=120>
+
+
+
 In classical programming, answers are the product of input data and the explicit rules that programmers manually program.
 
 In *machine learning*, input data and example answers yield the rules we can use on future inputs. The output is a function of the inputs. Deep learning attempts to approximate that applied function.
 
 Deep learning answers the same questions as ML (classification, clustering, regressions, anomaly detection, what should we do next?) and can work with both labeled and unlabeled data.
 
-<img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/01fig02.jpg" height=150 >
+<img src="ai_ml_dl.jpeg" height=150 >
 
 
 
@@ -26,7 +28,11 @@ Applied linear algebra and calculus w/ the latest in hardware. Yay, math!
 
 The "deep" refers to the number of layers of data transformation used to sift for meaningful representations. Imagine a chain of logisic regressions feeding into eachother. 
 
-Deep learning is the application of many different representations of data to identify meaningful relationships in data. Explore high dimensional representations of the data.
+<img src="01fig05.jpeg">
+
+Deep learning is the application of many different representations of data to identify meaningful relationships in data. Explore high dimensional representations of the data. 
+
+<img src="01fig06_alt.jpeg">
 
 The key component of deep learning sending representation results through an optimizer that updates weights and runs the inputs with the updated weights. 
 
@@ -37,15 +43,13 @@ The key component of deep learning sending representation results through an opt
 - Always better or always worse than classical machine learning. "It depends"
 - Free from bias and prejudice. (Biased inputs mean biased outputs) 
 
-### Bias in = bias out (garbage in, garbage out)
+### Bias in = bias out, garbage in, garbage out
 
-- As an example, researchers trained a Convolutional Neural Network (CNN) pictures of healthy skin and pictures of skin cancers lesions. Each image was labeled "non-cancerous" or "cancerous". The model was **very** accurate on the training data. With test data and real pictures, the model produced a *profound* amount of false negatives. It turns out that > 90% of the the "cancerous" labeled images for training had a ruler in the image, for scale. So the model "learned" to associate rulers in the picture with a positive cancer prediction.
+- As an example, researchers trained a Convolutional Neural Network (CNN) pictures of skin cancer patients with patients experiencing another kind of lesion. Each image was labeled "non-cancerous" or "cancerous". The model was **very** accurate on the training data. With test data and real pictures, the model produced a *profound* amount of false negatives. It turns out that > 90% of the the "cancerous" labeled images for training had a ruler in the image, for scale. So the model "learned" to associate rulers in the picture with a positive cancer prediction.
 - In another example, researchers building criminality prediction algorithm trained a neural network with labeled pictures. The criminal pictures were mug shots from convicts. For the "non-criminal" images, researchers used a set of royalty-free images of fashion models. Imagine the results! The more someone looks like a model, the less likely the criminality! 
-  - Racism! Because under-represented groups are *really* underrepresented in fashion and *very* overrepresented in the prison-industrial complex. 
-  - Classism! If you can afford to wear high fashion garments, invest in expensive make-up, and have a salon hairdo, then you, too, can walk free! 
-- Incentivized, ignorant, and malicious actors will claim "the data doesn't lie". They wash their hands claiming "science" and "computer algorithms". No incentive to question assumptions.
-- Takeaway: *many* problems need the model to be interpretable. 
-- It's our ethical duty to shine the light, to work to make things better not worse.
+- Incentivized, ignorant, and malicious actors can claim "the data doesn't lie". They can wash their hands claiming "science" and "computer algorithms". No incentive to question assumptions or methods.
+- Takeaway: *many* problems need the model to be interpretable. Things like health insurance, loan approval, predictive policing, 
+- It's our ethical duty to shine the light, to work to make things better not worse. 
 
 ### Vocabulary
 
@@ -72,7 +76,7 @@ Each image usually has 3 dimensions: height, width, and color-channels (sometime
 
 The 4th dimension is the set of all samples.
 
-<img alt="4d data" src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig04.jpg" width="230">
+<img alt="4d data" src="02fig04.jpeg" width="230">
 
 ### Identify meaningful representations of the data
 
@@ -80,7 +84,7 @@ This figure shows the original data and a new representation. We obtain new repr
 
 > “Black points are such that x > 0,” or “White points are such that x < 0.”
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/01fig04.jpg" >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="01fig04.jpeg" >
 
 
 
@@ -88,18 +92,20 @@ Geometric transformations in high dimensional space. "Uncrumpling paper balls is
 
 
 
-![dimensionality reduction](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig09.jpg)
+![dimensionality reduction](02fig09.jpeg)
 
 ## Anatomy of a Deep Learning Network
 
-<img src="https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/01fig09.jpg" height="300px">
+<img src="01fig09.jpg" height="300px">
 
 
 - In deep learning, we perform many data representations and transformations to compare predictions vs. true targets. The accuracy of the prediction is fed into an optimizer, and the optimizer updates the weights on different layers or features. Then, we run the data through the same layers with updated weights.
 - This is the "learning" process: the feeding back of the result of predictions (backpropogation) through an optimization function that updates weights on layers that run on the data again, making for more effective predictions.
 - Each layer is the application of many geometric transformations of the tensor data
 
-![representations](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/01fig06_alt.jpg)
+![representations](01fig06_alt.jpeg)
+
+
 
 
 
@@ -115,11 +121,11 @@ With our `optimizer`, training happens within what’s called a *training loop*,
 
 ### Stochastic Gradient Descent 
 
-![single paremeter gradient descent](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig11.jpg)
+![single paremeter gradient descent](02fig11.jpeg)
 
 
 
-![gradient descent](https://dpzbhybb2pdcj.cloudfront.net/chollet/Figures/02fig12.jpg)
+![gradient descent](02fig12.jpeg)
 
 
 

@@ -5,7 +5,7 @@ This workshop will introduce the conceptual basis of deep learning with neural n
 
 ## What is Deep Learning?
 
-In a nutshell, it's applied linear algebra and calculus running on the latest hardware. Yay, math!
+In a nutshell, it's good ol' fashioned linear algebra and calculus.
 
 The "deep" refers to the number of layers of data transformation used to sift for meaningful representations. Imagine a chain of logisic regressions feeding into eachother.
 
