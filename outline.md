@@ -1,6 +1,11 @@
 # Hands-On Intro to Keras 
 
-*Just enough Keras for students to put on their resume or use to supplement their capstone projects.*
+*Enough Keras for students to put on their resume, use to supplement capstone projects, and starter scaffolding/kindling for an onramp to further study.*
+
+https://keras.io/examples/vision/image_classification_from_scratch/
+
+Cats and Dogs Dataset
+https://www.microsoft.com/en-us/download/details.aspx?id=54765
 
 ## Act I - Intro to ANNs 
 
