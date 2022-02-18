@@ -1,11 +1,7 @@
 # Hands-On Intro to Keras 
 
-*Enough Keras for students to put on their resume, use to supplement capstone projects, and starter scaffolding/kindling for an onramp to further study.*
+*Enough Keras for students to put on their resume, use to supplement capstone projects, and provide starter scaffolding/kindling further study.*
 
-https://keras.io/examples/vision/image_classification_from_scratch/
-
-Cats and Dogs Dataset
-https://www.microsoft.com/en-us/download/details.aspx?id=54765
 
 ## Act I - Intro to ANNs 
 
@@ -38,3 +34,16 @@ MNIST Digits and Fashion datasets with a CNN
   - Classify movie review sentiment
   - House price predictor using regression
   - Classify newswire topics (multiclass)
+
+
+
+Cats and Dogs Dataset
+https://www.microsoft.com/en-us/download/details.aspx?id=54765
+
+
+## V2 Plan
+1. Madeleine's [slide presentation](https://www.canva.com/design/DAEmPvaYkME/4qmHhwtt6Dwl8mP3NAz16g/view?utm_content=DAEmPvaYkME&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
+2. Dedicated reading time of handout.pdf
+3. Guided demo of:
+  - https://keras.io/examples/vision/mnist_convnet/
+  - https://keras.io/examples/vision/image_classification_from_scratch/
